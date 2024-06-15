@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: #222;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+    /*nav */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+        padding: 1.4rem 1rem;
+        background-color: #000000b5;
+        backdrop-filter: blur(10px);
+        border-radius: 3rem;
+        margin-top: 1rem;
+    
+        box-shadow: 0px 0px 3px rgb(254 116 62);
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding: 0;
+        background-color: transparent;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    li {
+        padding: 0rem 1.1rem;
+        float: left;
+    }
+
+    li a {
+        color: #e96d3f;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .7px;
+    }
+
+    ul li a {
+        position: relative;
+    }
+
+    ul li a::before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    /* Center Animation */
+    ul li a::before {
+        transform: scale(0, 1);
+        transition: transform .3s ease;
+    }
+
+    ul li a:hover::before {
+        transform: scale(1, 1);
+    }
+    li a.active,
+    li a:hover {
+        color: #fff;
+        transition: all .3s ease-in-out
+    }
+.crud{
+    width: 80%;
+    margin: auto;
+    
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+
+}
+input{
+    width: 100%;
+    height:30px;
+    outline: none;
+    border: none;
+    background: #111;
+    margin: 6px 0;
+    border-radius: 6px;
+    padding: 4px;
+    color: #fff;
+
+}
+input:focus{
+    background: #000;
+    transform: scale(1.05);
+
+}
+.price input{
+    width: 20%;
+
+}
+#total{
+    background: #a00d02;
+    padding: 6px 2px;
+    border-radius: 5px;
+}
+#total::before{
+    content: 'Total:';
+}
+button{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background: #e96d3f;
+    border-radius: 20px;
+}
+button:hover{
+    letter-spacing: .2rem;
+    transition: .5s;
+    color: #fff;
+    background: #e96d3f;
+
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+
+}
+.btnSearch button{
+    margin: 10px 0;
+    width: 45%;
+}
+table{
+    width: 100%;
+    text-align: center;
+
+}
+table th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+    
+}
+.credit
+{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    border-top: 1px solid rgba(202, 29, 29, 0.1);
+}
+.credit span
+{
+    color: #e96d3f;
+}
+
+@media (max-width:991px){
+    html
+        {
+            font-size: 55%;
+        }
+    .header
+        {
+            padding: 2rem;
+        }
+    section
+        {
+            padding: 2rem;
+        }
+}
+@media (max-width:768px){
+
+    #menu-btn
+        {
+            display: initial;
+        }
+    .header .navbar
+        {
+            position: absolute;
+            top: 115%; right: 2rem;
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            width: 30rem;
+            border: var(--border);
+            background: #fff;
+            transform: scale(0);
+            opacity: 0;
+            transform-origin: top right;
+            transition: none;
+        }
+        .header .navbar.active
+        {
+            transform: scale(1);
+            opacity: 1;
+            transition: .2s ease-out;
+        }
+        .header .navbar a
+        {
+            font-size: 2rem;
+            display: block;
+            margin: 2.5rem;
+        }
+}
+@media (max-width:450px){
+    html
+        {
+            font-size: 40%;
+            text-align: center;
+            font-weight: 300;
+        }
+    }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <time>cruds</title> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Open voice.</a>
+            </div>
+                <div class="menu">
+                    <i class="bi bi-list"></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link">Tasks Page</a></li>
+                <li><a href="../about/aboutindex.html" class="nav-link">About</a></li>
+                <li><a href="../contact/indexcontac.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="crud">
+        <div class="head">
+            <h2>CRUDS</h2>
+            <p>product management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="enter your title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="enter your price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="enter your taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="enter your ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="enter your discount" id="discount">
+                <small  id="total"></small>
+
+            </div>
+            <input type="number" placeholder="enter your count" id="count">
+            <input type="text" id="categry" placeholder="enter your categry">
+            <button id="submit">create</button>
+
+
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search" >
+                <div class="btnSearch">
+                    <button onclick="getsearch(this.id)" id="searchTitle">search by title</button>
+                    <button  onclick= "getsearch()" searchCategory">search by category</button>
+
+                </div>
+            </div>
+            <div id="deletAll"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>ads</th>
+                    <th>taxes</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="credit">created &copy; by <span>Abdelrhman ismail </span>| all right reserved</div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 80%;
+    background: #222;
+    color: #fff;
+}
+
+/*nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    padding: 1.4rem 1rem;
+    background-color: #000000b5;
+    backdrop-filter: blur(10px);
+    border-radius: 3rem;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 3px rgb(254 116 62);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+li {
+    padding: 0rem 1.1rem;
+}
+
+li a {
+    color: #e96d3f;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+    position: relative;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transform: scale(0, 1);
+    transition: transform .3s ease;
+}
+
+ul li a:hover::before,
+li a.active::before {
+    transform: scale(1, 1);
+}
+
+li a.active,
+li a:hover {
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.about {
+    background: #222;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    text-align: center;
+}
+
+.btn {
+    padding: .6rem 3rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+    background: #e96d3f;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+.about .row .image img {
+    width: 85%;
+    border-radius: .5rem;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2.5rem;
+}
+
+.about .row .content h3 {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.8rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.about .row .content p i {
+    padding-right: .5rem;
+    color: #e96d3f;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    nav {
+        max-width: 98%;
+    }
+
+    .about .row .content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+
+    nav {
+        max-width: 100%;
+    }
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .about .row .image,
+    .about .row .content {
+        flex: 1 1 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .about .row .image img {
+        width: 90%;
+    }
+}
+.heading
+{
+    text-align: center;
+    padding-bottom: .5rem;
+    text-shadow: var(--text-shadow-shadow);
+    text-transform:uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+.heading span
+{
+    text-transform:uppercase;
+    color:#e96d3f;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 85%;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        padding: 1rem 0;
+    }
+}

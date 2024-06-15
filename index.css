@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-image: url('modern-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    /* overflow: hidden; */
+    height: 100vh;
+}
+
+/*nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    padding: 1.4rem 1rem;
+    background-color: #000000b5;
+    backdrop-filter: blur(10px);
+    border-radius: 3rem;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 3px rgb(254 116 62);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+li {
+    padding: 0rem 1.1rem;
+    float: left;
+}
+
+li a {
+    color: #e96d3f;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
+ul li a {
+    position: relative;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Center Animation */
+ul li a::before {
+    transform: scale(0, 1);
+    transition: transform .3s ease;
+}
+
+ul li a:hover::before {
+    transform: scale(1, 1);
+}
+
+li a.active,
+li a:hover {
+    color: #fff;
+    transition: all .3s ease-in-out
+}
+
+.image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#click {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.home {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url(../images/photo_2024-02-10_01-11-09.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px;
+    /* padding-top: 9rem; */
+}
+
+.btn {
+    padding: .6rem 3rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+    background: #e96d3f;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+.home .content {
+    padding: 5rem;
+    flex: 1 1 40rem;
+}
+
+.home .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    padding: 10px;
+}
+
+.home .content p {
+    font-size: 1.9rem;
+    color: #eee;
+    padding: 2rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@media only screen and (max-width: 1024px) {
+    nav {
+        max-width: 98%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+
+    nav {
+        max-width: 100%;
+    }
+
+    .home .content h1 {
+        font-size: 4rem; /* تقليص حجم الخط */
+    }
+
+    .home .content p {
+        font-size: 1.5rem; /* تقليص حجم الخط */
+    }
+
+    .home .content {
+        padding: 3rem; /* تقليص الحشو */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 85%;
+    }
+
+    header {
+        height: auto; /* تعديل الارتفاع ليكون تلقائي */
+    }
+
+    li {
+        padding: 1rem 1.1rem;
+    }
+
+    .menu {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ul {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 4rem;
+        left: -100%;
+        background-color: #000000b5;
+        backdrop-filter: blur(10px);
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+
+    .home .content h1 {
+        font-size: 3rem; 
+    }
+
+    .home .content p {
+        font-size: 1.2rem; 
+    }
+
+    .home .content {
+        padding: 2rem; 
+    }
+}
